@@ -1,0 +1,8 @@
+# backend
+.vscode
+__pycache__
+env
+migrations
+
+# frontend
+node_modules
