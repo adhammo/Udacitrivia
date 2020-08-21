@@ -153,22 +153,22 @@ Endpoint: http://localhost:5000/
 
 **Question Schema:**
 
-```
+```python
 {
-    "id": number,
-    "question": string,
-    "answer": string,
-    "difficulty": number, 	// a natural number from 1 to 5 inclusive
-    "category": number 		// category id (must exist before question)
+    "id": int,
+    "question": str,
+    "answer": str,
+    "difficulty": int, # a natural int from 1 to 5 inclusive
+    "category": int # category id (must exist before question)
 }
 ```
 
 **Category Schema:**
 
-```
+```python
 {
-	"id": number,
-	"type": string,			// category name
+	"id": int,
+	"type": str,				# category name
 	"questions": [
 		(Question Schema),
 		(Question Schema),
@@ -181,12 +181,12 @@ Endpoint: http://localhost:5000/
 
 If **Trivia API** couldn't fulfill the request because an error has occurred for any reason it will respond with an error status and with the next standardized message:
 
-```
+```python
 {
-    "error": number, 		// status code
-    "message": string, 		// breif error message
-    "description": string, 	// detailed error message
-    "success": false
+    "error": int, 		# status code
+    "message": str, 		# brief error message
+    "description": str, 	# detailed error message
+    "success": False
 }
 ```
 
@@ -205,15 +205,15 @@ Host: localhost:5000
 
 **Response**
 
-```
+```python
 {
 	"questions": [
 		(Question Schema),
 		(Question Schema),
 		...
 	],
-	"total_questions": number,
-	"success": true
+	"total_questions": int,
+	"success": True
 }
 ```
 
@@ -230,16 +230,16 @@ Host: localhost:5000
 
 **Response**
 
-```
+```python
 {
 	"question": (Question Schema),
-	"success": true
+	"success": True
 }
 ```
 
 ### Search Questions
 
-Retrieves all questions in **trivia** database that include a **search term** as a sub-string.
+Retrieves all questions in **trivia** database that include a **search term** as a sub-str.
 
 **Request**
 
@@ -250,24 +250,24 @@ Host: localhost:5000
 
 with body:
 
-```
+```python
 {
-    "search_term": string
+    "search_term": str
 }
 ```
 
 **Response**
 
-```
+```python
 {
-	"questions": [			// all or paginated questions
+	"questions": [					# all or paginated questions
 		(Question Schema),
 		(Question Schema),
 		...
 	],
-	"total_questions": number,	// count of all questions
-	"search_term": string,
-	"success": true
+	"total_questions": int,		# count of all questions
+	"search_term": str,
+	"success": True
 }
 ```
 
@@ -284,12 +284,12 @@ Host: localhost:5000
 
 with body:
 
-```
+```python
 {
-    "question": string,
-    "answer": string,
-    "difficulty": number, 	// a natural number from 1 to 5 inclusive
-    "category": number 		// category id (must exist before question)
+    "question": str,
+    "answer": str,
+    "difficulty": int, # a natural int from 1 to 5 inclusive
+    "category": int # category id (must exist before question)
 }
 ```
 
@@ -298,10 +298,10 @@ with body:
 **Response**
 Returns the question that was just created.
 
-```
+```python
 {
 	"question": (Question Schema),
-	"success": true
+	"success": True
 }
 ```
 
@@ -318,12 +318,12 @@ Host: localhost:5000
 
 with body:
 
-```
+```python
 {
-    "question": string,
-    "answer": string,
-    "difficulty": number, 	// a natural number from 1 to 5 inclusive
-    "category": number 		// category id (must exist before question)
+    "question": str,
+    "answer": str,
+    "difficulty": int, # a natural int from 1 to 5 inclusive
+    "category": int # category id (must exist before question)
 }
 ```
 
@@ -332,10 +332,10 @@ with body:
 **Response**
 Returns the question that was just edited.
 
-```
+```python
 {
 	"question": (Question Schema),
-	"success": true
+	"success": True
 }
 ```
 
@@ -352,12 +352,12 @@ Host: localhost:5000
 
 with body:
 
-```
+```python
 {
-    "question": string,
-    "answer": string,
-    "difficulty": number, 	// a natural number from 1 to 5 inclusive
-    "category": number 		// category id (must exist before question)
+    "question": str,
+    "answer": str,
+    "difficulty": int, # a natural int from 1 to 5 inclusive
+    "category": int # category id (must exist before question)
 }
 ```
 
@@ -366,10 +366,10 @@ with body:
 **Response**
 Returns the question that was just edited.
 
-```
+```python
 {
 	"question": (Question Schema),
-	"success": true
+	"success": True
 }
 ```
 
@@ -387,10 +387,10 @@ Host: localhost:5000
 **Response**
 Returns the question that was just deleted.
 
-```
+```python
 {
 	"question": (Question Schema),
-	"success": true
+	"success": True
 }
 ```
 
@@ -409,14 +409,14 @@ Host: localhost:5000
 
 **Response**
 
-```
+```python
 {
 	"categories": [
 		(Category Schema),
 		(Category Schema),
 		...
 	],
-	"success": true
+	"success": True
 }
 ```
 
@@ -433,10 +433,10 @@ Host: localhost:5000
 
 **Response**
 
-```
+```python
 {
 	"category": (Category Schema),
-	"success": true
+	"success": True
 }
 ```
 
@@ -453,22 +453,22 @@ Host: localhost:5000
 
 **Response**
 
-```
+```python
 {
 	"category": (Category Schema),
-	"questions" [				// all or paginated questions
+	"questions" [						# all or paginated questions
 		(Question Schema),
 		(Question Schema),
 		...
 	],
-	"total_questions": number, 		// count of all questions
-	"success": true
+	"total_questions": int, 			# count of all questions
+	"success": True
 }
 ```
 
 ### Search Category Questions
 
-Retrieves all questions of a category in **trivia** database that include a **search term** as a sub-string.
+Retrieves all questions of a category in **trivia** database that include a **search term** as a sub-str.
 
 **Request**
 
@@ -479,25 +479,25 @@ Host: localhost:5000
 
 with body:
 
-```
+```python
 {
-    "search_term": string
+    "search_term": str
 }
 ```
 
 **Response**
 
-```
+```python
 {
 	"category": (Category Schema),
-	"questions": [				// all or paginated questions
+	"questions": [					# all or paginated questions
 		(Question Schema),
 		(Question Schema),
 		...
 	],
-	"total_questions": number,		// count of all questions
-	"search_term": string,
-	"success": true
+	"total_questions": int,		# count of all questions
+	"search_term": str,
+	"success": True
 }
 ```
 
@@ -516,7 +516,7 @@ Host: localhost:5000
 
 with body:
 
-```
+```python
 {
 	"quiz_category": (Category Schema),
 	"previous_questions": [
@@ -531,16 +531,16 @@ with body:
 
 **Response**
 
-```
+```python
 {
-	"category": (Category Schema),		// only if provided a quiz_category
-	"questions": [				// all or paginated questions
+	"category": (Category Schema),	# only if provided a quiz_category
+	"questions": [					# all or paginated questions
 		(Question Schema),
 		(Question Schema),
 		...
 	],
-	"total_questions": number,		// count of all questions
-	"search_term": string,
-	"success": true
+	"total_questions": int,		# count of all questions
+	"search_term": str,
+	"success": True
 }
 ```
