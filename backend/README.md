@@ -155,11 +155,11 @@ Endpoint: http://localhost:5000/
 
 ```json
 {
-    "id": number,
-    "question": string,
-    "answer": string,
-    "difficulty": number, // a natural number from 1 to 5 inclusive
-    "category": number // category id (must exist before question)
+    "id": "number",
+    "question": "string",
+    "answer": "string",
+    "difficulty": "number", // a natural number from 1 to 5 inclusive
+    "category": "number" // category id (must exist before question)
 }
 ```
 
@@ -167,12 +167,12 @@ Endpoint: http://localhost:5000/
 
 ```json
 {
-	"id": number,
-	"type": string,				// category name
+	"id": "number",
+	"type": "string",				// category name
 	"questions": [
-		(Question Schema),
-		(Question Schema),
-		...
+		"(Question Schema)",
+		"(Question Schema)",
+		"..."
 	]
 }
 ```
@@ -183,9 +183,9 @@ If **Trivia API** couldn't fulfill the request because an error has occurred for
 
 ```json
 {
-    "error": number, // status code
-    "message": string, // breif error message
-    "description": string, // detailed error message
+    "error": "number", // status code
+    "message": "string", // breif error message
+    "description": "string", // detailed error message
     "success": false
 }
 ```
@@ -208,11 +208,11 @@ Host: localhost:5000
 ```json
 {
 	"questions": [
-		(Question Schema),
-		(Question Schema),
-		...
+		"(Question Schema)",
+		"(Question Schema)",
+		"..."
 	],
-	"total_questions": number,
+	"total_questions": "number",
 	"success": true
 }
 ```
@@ -232,7 +232,7 @@ Host: localhost:5000
 
 ```json
 {
-	"question": (Question Schema),
+	"question": "(Question Schema)",
 	"success": true
 }
 ```
@@ -252,7 +252,7 @@ with body:
 
 ```json
 {
-    "search_term": string
+    "search_term": "string"
 }
 ```
 
@@ -261,12 +261,12 @@ with body:
 ```json
 {
 	"questions": [					// all or paginated questions
-		(Question Schema),
-		(Question Schema),
-		...
+		"(Question Schema)",
+		"(Question Schema)",
+		"..."
 	],
-	"total_questions": number,		// count of all questions
-	"search_term": string,
+	"total_questions": "number",		// count of all questions
+	"search_term": "string",
 	"success": true
 }
 ```
@@ -286,10 +286,10 @@ with body:
 
 ```json
 {
-    "question": string,
-    "answer": string,
-    "difficulty": number, // a natural number from 1 to 5 inclusive
-    "category": number // category id (must exist before question)
+    "question": "string",
+    "answer": "string",
+    "difficulty": "number", // a natural number from 1 to 5 inclusive
+    "category": "number" // category id (must exist before question)
 }
 ```
 
@@ -300,7 +300,7 @@ Returns the question that was just created.
 
 ```json
 {
-	"question": (Question Schema),
+	"question": "(Question Schema)",
 	"success": true
 }
 ```
@@ -320,10 +320,10 @@ with body:
 
 ```json
 {
-    "question": string,
-    "answer": string,
-    "difficulty": number, // a natural number from 1 to 5 inclusive
-    "category": number // category id (must exist before question)
+    "question": "string",
+    "answer": "string",
+    "difficulty": "number", // a natural number from 1 to 5 inclusive
+    "category": "number" // category id (must exist before question)
 }
 ```
 
@@ -334,7 +334,7 @@ Returns the question that was just edited.
 
 ```json
 {
-	"question": (Question Schema),
+	"question": "(Question Schema)",
 	"success": true
 }
 ```
@@ -354,10 +354,10 @@ with body:
 
 ```json
 {
-    "question": string,
-    "answer": string,
-    "difficulty": number, // a natural number from 1 to 5 inclusive
-    "category": number // category id (must exist before question)
+    "question": "string",
+    "answer": "string",
+    "difficulty": "number", // a natural number from 1 to 5 inclusive
+    "category": "number" // category id (must exist before question)
 }
 ```
 
@@ -368,7 +368,7 @@ Returns the question that was just edited.
 
 ```json
 {
-	"question": (Question Schema),
+	"question": "(Question Schema)",
 	"success": true
 }
 ```
@@ -389,7 +389,7 @@ Returns the question that was just deleted.
 
 ```json
 {
-	"question": (Question Schema),
+	"question": "(Question Schema)",
 	"success": true
 }
 ```
@@ -412,9 +412,9 @@ Host: localhost:5000
 ```json
 {
 	"categories": [
-		(Category Schema),
-		(Category Schema),
-		...
+		"(Category Schema)",
+		"(Category Schema)",
+		"..."
 	],
 	"success": true
 }
@@ -435,7 +435,7 @@ Host: localhost:5000
 
 ```json
 {
-	"category": (Category Schema),
+	"category": "(Category Schema)",
 	"success": true
 }
 ```
@@ -455,13 +455,13 @@ Host: localhost:5000
 
 ```json
 {
-	"category": (Category Schema),
-	"questions" [						// all or paginated questions
-		(Question Schema),
-		(Question Schema),
-		...
+	"category": "(Category Schema)",
+	"questions": [						// all or paginated questions
+		"(Question Schema)",
+		"(Question Schema)",
+		"..."
 	],
-	"total_questions": number, 			// count of all questions
+	"total_questions": "number", 			// count of all questions
 	"success": true
 }
 ```
@@ -481,7 +481,7 @@ with body:
 
 ```json
 {
-    "search_term": string
+    "search_term": "string"
 }
 ```
 
@@ -489,14 +489,14 @@ with body:
 
 ```json
 {
-	"category": (Category Schema),
+	"category": "(Category Schema)",
 	"questions": [					// all or paginated questions
-		(Question Schema),
-		(Question Schema),
-		...
+		"(Question Schema)",
+		"(Question Schema)",
+		"..."
 	],
-	"total_questions": number,		// count of all questions
-	"search_term": string,
+	"total_questions": "number",		// count of all questions
+	"search_term": "string",
 	"success": true
 }
 ```
@@ -518,11 +518,11 @@ with body:
 
 ```json
 {
-	"quiz_category": (Category Schema),
+	"quiz_category": "(Category Schema)",
 	"previous_questions": [
-		(Question Schema),
-		(Question Schema),
-		...
+		"(Question Schema)",
+		"(Question Schema)",
+		"..."
 	]
 }
 ```
@@ -533,14 +533,14 @@ with body:
 
 ```json
 {
-	"category": (Category Schema),	// only if provided a quiz_category
+	"category": "(Category Schema)",	// only if provided a quiz_category
 	"questions": [					// all or paginated questions
-		(Question Schema),
-		(Question Schema),
-		...
+		"(Question Schema)",
+		"(Question Schema)",
+		"..."
 	],
-	"total_questions": number,		// count of all questions
-	"search_term": string,
+	"total_questions": "number",		// count of all questions
+	"search_term": "string",
 	"success": true
 }
 ```
