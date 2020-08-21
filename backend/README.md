@@ -168,7 +168,7 @@ Endpoint: http://localhost:5000/
 ```
 {
 	"id": number,
-	"type": string,				// category name
+	"type": string,			// category name
 	"questions": [
 		(Question Schema),
 		(Question Schema),
@@ -260,12 +260,12 @@ with body:
 
 ```
 {
-	"questions": [					// all or paginated questions
+	"questions": [			// all or paginated questions
 		(Question Schema),
 		(Question Schema),
 		...
 	],
-	"total_questions": number,			// count of all questions
+	"total_questions": number,	// count of all questions
 	"search_term": string,
 	"success": true
 }
@@ -456,12 +456,12 @@ Host: localhost:5000
 ```
 {
 	"category": (Category Schema),
-	"questions" [					// all or paginated questions
+	"questions" [				// all or paginated questions
 		(Question Schema),
 		(Question Schema),
 		...
 	],
-	"total_questions": number, 			// count of all questions
+	"total_questions": number, 		// count of all questions
 	"success": true
 }
 ```
