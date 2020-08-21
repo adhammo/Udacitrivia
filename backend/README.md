@@ -158,8 +158,8 @@ Endpoint: http://localhost:5000/
     "id": number,
     "question": string,
     "answer": string,
-    "difficulty": number, // a natural number from 1 to 5 inclusive
-    "category": number // category id (must exist before question)
+    "difficulty": number, 	// a natural number from 1 to 5 inclusive
+    "category": number 		// category id (must exist before question)
 }
 ```
 
@@ -183,9 +183,9 @@ If **Trivia API** couldn't fulfill the request because an error has occurred for
 
 ```
 {
-    "error": number, // status code
-    "message": string, // breif error message
-    "description": string, // detailed error message
+    "error": number, 		// status code
+    "message": string, 		// breif error message
+    "description": string, 	// detailed error message
     "success": false
 }
 ```
@@ -265,7 +265,7 @@ with body:
 		(Question Schema),
 		...
 	],
-	"total_questions": number,		// count of all questions
+	"total_questions": number,			// count of all questions
 	"search_term": string,
 	"success": true
 }
@@ -288,8 +288,8 @@ with body:
 {
     "question": string,
     "answer": string,
-    "difficulty": number, // a natural number from 1 to 5 inclusive
-    "category": number // category id (must exist before question)
+    "difficulty": number, 	// a natural number from 1 to 5 inclusive
+    "category": number 		// category id (must exist before question)
 }
 ```
 
@@ -322,8 +322,8 @@ with body:
 {
     "question": string,
     "answer": string,
-    "difficulty": number, // a natural number from 1 to 5 inclusive
-    "category": number // category id (must exist before question)
+    "difficulty": number, 	// a natural number from 1 to 5 inclusive
+    "category": number 		// category id (must exist before question)
 }
 ```
 
@@ -356,8 +356,8 @@ with body:
 {
     "question": string,
     "answer": string,
-    "difficulty": number, // a natural number from 1 to 5 inclusive
-    "category": number // category id (must exist before question)
+    "difficulty": number, 	// a natural number from 1 to 5 inclusive
+    "category": number 		// category id (must exist before question)
 }
 ```
 
@@ -456,7 +456,7 @@ Host: localhost:5000
 ```
 {
 	"category": (Category Schema),
-	"questions" [						// all or paginated questions
+	"questions" [					// all or paginated questions
 		(Question Schema),
 		(Question Schema),
 		...
@@ -490,7 +490,7 @@ with body:
 ```
 {
 	"category": (Category Schema),
-	"questions": [					// all or paginated questions
+	"questions": [				// all or paginated questions
 		(Question Schema),
 		(Question Schema),
 		...
@@ -533,8 +533,8 @@ with body:
 
 ```
 {
-	"category": (Category Schema),	// only if provided a quiz_category
-	"questions": [					// all or paginated questions
+	"category": (Category Schema),		// only if provided a quiz_category
+	"questions": [				// all or paginated questions
 		(Question Schema),
 		(Question Schema),
 		...
